@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- or best way to mention -->
+
+	<bean class="Com.SpringInjectingReferenceTypeDay3Yt.Student"
+		name="studObj2" p:studentId="85" p:std="15" p:studentAddress="Mumbai" />
+
+	<bean class="Com.SpringInjectingReferenceTypeDay3Yt.Person"
+		name="perObj2" p:name="Raju" p:st-ref="studObj2" />
+
+
+
+
+
+	<!-- or long process and old method way to mention -->
+
+
+<!-- 	<bean class="Com.SpringInjectingReferenceTypeDay3Yt.Student" -->
+<!-- 		name="studObj"> -->
+<!-- 		<property name="studentId" value="456"></property> -->
+<!-- 		<property name="std" value="5"></property> -->
+<!-- 		<property name="studentAddress" value="Pune"></property> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean class="Com.SpringInjectingReferenceTypeDay3Yt.Person" -->
+<!-- 		name="perObj"> -->
+<!-- 		<property name="name" value="Krishna"></property> -->
+<!-- 		<property name="st"> -->
+<!-- 			<ref bean="studObj" /> -->
+<!-- 		</property> -->
+
+<!-- 	</bean> -->
+
+
+
+
+
+
+</beans>

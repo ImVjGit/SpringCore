@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	
+	xmlns:util="http://www.springframework.org/schema/util"
+	
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+<!-- 	standalone list -->
+
+<util:list list-class="java.util.LinkedList" id="mybestfriend">
+<value>han</value>
+<value>ean</value>
+<value>da</value>
+<value>qwwww</value>
+<value>wffff</value>
+<value>cccc</value>
+<value>zzzz</value>
+<value>nnnn</value>
+<value>aaaa</value>
+<value>zzzzz</value>
+
+ </util:list>
+ 
+<!--  StandaloneTag for Map -->
+ 
+ 
+<util:map map-class="java.util.HashMap" id="fees" >
+
+<entry  key="Spring FremWork"  value="50000" />
+<entry  key="KAli FremWork"  value="10000" />
+<entry  key="Linux FremWork"  value="20000" />
+<entry  key="Cpp FremWork"  value="60000" />
+<entry  key="Java FremWork"  value="70000" />
+<entry  key=".Net FremWork"  value="22000" />
+<entry  key="Qalik FremWork"  value="3000" />
+
+</util:map>
+
+
+<!-- StandAlone Tage for Properties  -->
+
+<util:properties id="dbconfig">
+
+<prop key="driver">com.mysql.jdbc.Driver</prop>
+<prop key="username">root</prop>
+<prop key="password">toor</prop>
+<prop key="url">mysql:jdbc://localhost:3306/databases</prop>
+</util:properties>
+
+
+	<bean class="Com.SpringStandaloneCollectionsDay12Yt.Person" name="person1">
+	
+<!-- 	<property name="friends"> -->
+<!-- 	<ref bean="mybestfriend"/>	 -->
+<!-- 	</property> -->
+	
+	<property name="friends" ref="mybestfriend"/>
+	<property name="feestructre" ref="fees" />
+	<property name="propertiesInClass" ref="dbconfig" />
+	</bean>
+
+
+
+
+</beans>

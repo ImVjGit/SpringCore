@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- **********************************************************************************************8 -->
+	<!-- its setter method use to injecting -->
+	<!-- all primaive data can be store -->
+	<!-- ********************************************************************************************8 -->
+	<!-- 1 normal with name and value tag -->
+	<bean class="Com.SpringAddingDependDay1Yt.Student" id="studnet1">
+		<property name="studentId">
+			<value>12</value>
+		</property>
+		<property name="studentName">
+			<value>Ram</value>
+		</property>
+		<property name="studentAddress">
+			<value>Pune</value>
+		</property>
+	</bean>
+
+
+
+	<!-- 2 using value attribute -->
+	<bean class="Com.SpringAddingDependDay1Yt.Student" id="studnet2">
+
+		<property name="studentId" value="12" />
+		<property name="studentName" value="Ram" />
+		<property name="studentAddress" value="Pune" />
+
+	</bean>
+
+	<!-- (moslty use )3 using p schema -->
+	<bean class="Com.SpringAddingDependDay1Yt.Student" id="studnet3"
+		p:studentId="123400" p:studentName="Ganija" p:studentAddress="Mumbai" />
+
+
+
+
+
+
+
+
+
+	<!-- ***************************************************************************************************************************88 -->
+	<!-- all non-primative data type store here -->
+
+	<!-- ******************************************************************************************************************************88 -->
+
+
+	<!-- 1 list -->
+	<bean>
+		<property name="">
+			<list>
+				<value>12</value>
+				<value>15</value>
+				<value>16</value>
+				<value>89</value>
+				<null />
+			</list>
+
+		</property>
+	</bean>
+
+
+	<!-- 2 set -->
+
+	<bean>
+		<property name="">
+			<set>
+				<value></value>
+				<value></value>
+				<value></value>
+			</set>
+
+		</property>
+	</bean>
+
+
+	<!-- 3 map -->
+	<bean>
+		<property name="">
+			<map>
+				<entry key=" " value="" />
+				<entry key=" " value="" />
+				<entry key=" " value="" />
+				<entry key=" " value="" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- 4 properties -->
+
+	<bean>
+		<property name="">
+			<props>
+				<prop key="name">Ram</prop>
+				<prop key="City">Pune</prop>
+			</props>
+
+
+		</property>
+	</bean>
+
+
+
+
+
+
+</beans>

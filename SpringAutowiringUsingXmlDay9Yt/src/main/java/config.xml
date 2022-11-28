@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- using this tag it enable all Annotation -->
+	<context:annotation-config />
+
+	<bean class="Com.SpringAutowiringUsingXmlDay9Yt.Address"
+		name="address">
+		<property name="street" value="RoKla Street"></property>
+		<property name="city" value="USA"></property>
+	</bean>
+
+
+							<!-- use any one  -->
+
+	<!-- 1 using byName it check the name in emp class (object name and name of 
+		bean must be same other wise its give null) -->
+	<bean class="Com.SpringAutowiringUsingXmlDay9Yt.Emp" name="emp1"
+		autowire="byName" />
+
+
+<!-- 	 2 using byType its check the type of emp class --> 
+
+<!-- 	<bean class="Com.SpringAutowiringUsingXmlDay9Yt.Emp" name="emp1" -->
+<!-- 		autowire="byType" /> -->
+
+<!-- 	3 call using constructor --> 
+<!-- 	<bean class="Com.SpringAutowiringUsingXmlDay9Yt.Emp" name="emp1" -->
+<!-- 		autowire="constructor" /> -->
+
+</beans>

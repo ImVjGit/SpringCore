@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 1 Option best way to do using schema c -->
+
+	<bean
+		class="Com.SpringInjectingConstructorInjectionDay4Yt.Certificate"
+		name="certi" c:cname="Full Java Course" c:cId="12346" />
+	
+	<bean class="Com.SpringInjectingConstructorInjectionDay4Yt.Person"
+		name="person">
+		<!-- it only call one paramater -->
+		<constructor-arg value="Vanika" />
+		<constructor-arg value="152" type="int" />
+		<constructor-arg ref="certi"></constructor-arg>
+
+	</bean>
+
+
+
+
+	<!-- 2 Option best way to do using Tag. -->
+	<bean
+		class="Com.SpringInjectingConstructorInjectionDay4Yt.Certificate"
+		name="certi1">
+		<constructor-arg value="JavaCode" />
+		<constructor-arg value="54216" type="int" />
+	</bean>
+
+
+	<bean class="Com.SpringInjectingConstructorInjectionDay4Yt.Person"
+		name="person1">
+		<!-- it only call one paramater -->
+		<constructor-arg value="Vanika" />
+		<constructor-arg value="152" type="int" />
+		<constructor-arg ref="certi"></constructor-arg>
+
+	</bean>
+
+</beans>
